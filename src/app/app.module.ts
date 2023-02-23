@@ -9,6 +9,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
     NavbarComponent,
     OrdersComponent,
     ProductsComponent,
-    AboutComponent
+    AboutComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
