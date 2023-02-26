@@ -1,48 +1,15 @@
 
 <section>
   <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">All products</div>
-  <section class="shadow-lg p-4">
-    <div *ngFor="let product of (products$ | async)">
-      <a [routerLink]="['/product', product.id]">
-        <span>
-          {{ product.title }}
-        </span>
-        <span class="font-bold">
-          {{ product.price | currency: 'EUR' }}
-        </span>
-      </a>
-    </div>
-  </section>
+  <app-products-list [products]="(products$ | async) || []"></app-products-list>
 </section>
 
 <section>
   <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">Sorted by price products</div>
-  <section class="shadow-lg p-4">
-    <div *ngFor="let product of (sortedByPriceProducts$ | async)">
-      <a [routerLink]="['/product', product.id]">
-        <span>
-          {{ product.title }}
-        </span>
-        <span class="font-bold">
-          {{ product.price | currency: 'EUR' }}
-        </span>
-      </a>
-    </div>
-  </section>
+  <app-products-list [products]="(sortedByPriceProducts$ | async) || []"></app-products-list>
 </section>
 
 <section>
-  <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">All products</div>
-  <section class="shadow-lg p-4">
-    <div *ngFor="let product of (chipestProducts$ | async)">
-      <a [routerLink]="['/product', product.id]">
-        <span>
-          {{ product.title }}
-        </span>
-        <span class="font-bold">
-          {{ product.price | currency: 'EUR' }}
-        </span>
-      </a>
-    </div>
-  </section>
+  <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">Chipest products</div>
+  <app-products-list [products]="(chipestProducts$ | async) || []"></app-products-list>
 </section>

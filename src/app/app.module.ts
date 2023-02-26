@@ -9,8 +9,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './components/product/product.component';
 import { ProductService } from './services/product.service';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProductService } from './services/product.service';
     OrdersComponent,
     ProductsComponent,
     AboutComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,

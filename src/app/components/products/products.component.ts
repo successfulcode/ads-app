@@ -10,11 +10,11 @@ import Product from 'src/app/types/interfaces/product';
 })
 export class ProductsComponent implements OnInit {
 
-  products$: Observable<Product[]> | undefined;
+  products$!: Observable<Product[]>;
 
-  sortedByPriceProducts$: Observable<Product[]> | undefined;
+  sortedByPriceProducts$!: Observable<Product[]>;
 
-  chipestProducts$: Observable<Product[]> | undefined;
+  chipestProducts$!: Observable<Product[]>;
 
   constructor(private productsService: ProductsService) {}
 
