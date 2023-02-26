@@ -1,1 +1,3 @@
-<p>product works!</p>
+<p *ngIf="!(productService.isLoading$ | async) && product">{{ product.title }}</p>
+
+<div *ngIf="productService.isLoading$ | async">Loading...</div>

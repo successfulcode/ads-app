@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product/product.component';
+import { ProductService } from './services/product.service';
 
 
 @NgModule({
@@ -27,7 +28,6 @@ import { ProductComponent } from './product/product.component';
     HttpClientModule,
     CommonModule 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

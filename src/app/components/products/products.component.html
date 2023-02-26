@@ -1,7 +1,48 @@
 
-<div>
-  <div *ngFor="let product of products">
-    <div>{{ product.title }}</div>
-  </div>
-</div>
+<section>
+  <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">All products</div>
+  <section class="shadow-lg p-4">
+    <div *ngFor="let product of (products$ | async)">
+      <a [routerLink]="['/product', product.id]">
+        <span>
+          {{ product.title }}
+        </span>
+        <span class="font-bold">
+          {{ product.price | currency: 'EUR' }}
+        </span>
+      </a>
+    </div>
+  </section>
+</section>
 
+<section>
+  <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">Sorted by price products</div>
+  <section class="shadow-lg p-4">
+    <div *ngFor="let product of (sortedByPriceProducts$ | async)">
+      <a [routerLink]="['/product', product.id]">
+        <span>
+          {{ product.title }}
+        </span>
+        <span class="font-bold">
+          {{ product.price | currency: 'EUR' }}
+        </span>
+      </a>
+    </div>
+  </section>
+</section>
+
+<section>
+  <div class="font-mono mt-5 text-lg font-bold text-[#1da1f2]">All products</div>
+  <section class="shadow-lg p-4">
+    <div *ngFor="let product of (chipestProducts$ | async)">
+      <a [routerLink]="['/product', product.id]">
+        <span>
+          {{ product.title }}
+        </span>
+        <span class="font-bold">
+          {{ product.price | currency: 'EUR' }}
+        </span>
+      </a>
+    </div>
+  </section>
+</section>
